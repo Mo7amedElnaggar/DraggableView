@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--FirstVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="FirstVC" id="BYZ-38-t0r" customClass="FirstVC" customModule="DraggableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUl-8T-sQ2">
+                                <rect key="frame" x="20" y="792" width="374" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8OD-vd-Vac"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Open Draggable">
+                                    <color key="titleColor" red="0.3311075866" green="0.32708224650000001" blue="0.86923629049999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="openDraggableView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qa0-2j-rjJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="yUl-8T-sQ2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="367-6x-TLb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yUl-8T-sQ2" secondAttribute="bottom" constant="20" id="B56-nR-7na"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yUl-8T-sQ2" secondAttribute="trailing" constant="20" id="By3-qi-VyC"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141" y="62"/>
+        </scene>
+        <!--SecondVC-->
+        <scene sceneID="3PB-0A-6fk">
+            <objects>
+                <viewController storyboardIdentifier="SecondVC" id="592-wT-yMO" customClass="SecondVC" customModule="DraggableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fkF-WI-oo2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xe9-hr-vAi" customClass="DraggableView" customModule="DraggableView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="502" width="414" height="394"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEM-0u-faF">
+                                        <rect key="frame" x="20" y="290" width="374" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="6lY-6j-Cdv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Open Draggable">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="dismissCurrent:" destination="592-wT-yMO" eventType="touchUpInside" id="JeH-H0-f3Z"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KAY-Up-zKG">
+                                        <rect key="frame" x="107" y="20" width="200" height="5"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="5" id="6k4-SP-9mb"/>
+                                            <constraint firstAttribute="width" constant="200" id="d4d-bK-RZ5"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pj6-RR-SEC">
+                                        <rect key="frame" x="20" y="55" width="374" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="bdd-i3-a6C"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wN5-sv-uH5">
+                                        <rect key="frame" x="20" y="170" width="374" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="MyA-wM-sZB"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="rEM-0u-faF" secondAttribute="trailing" constant="20" id="1WQ-B0-SSe"/>
+                                    <constraint firstItem="wN5-sv-uH5" firstAttribute="leading" secondItem="Xe9-hr-vAi" secondAttribute="leading" constant="20" id="6Iw-JP-Ys6"/>
+                                    <constraint firstAttribute="trailing" secondItem="wN5-sv-uH5" secondAttribute="trailing" constant="20" id="7bv-m6-32m"/>
+                                    <constraint firstItem="pj6-RR-SEC" firstAttribute="top" secondItem="KAY-Up-zKG" secondAttribute="bottom" constant="30" id="FOD-8t-Ftg"/>
+                                    <constraint firstItem="rEM-0u-faF" firstAttribute="top" secondItem="wN5-sv-uH5" secondAttribute="bottom" constant="20" id="GHp-68-4Yg"/>
+                                    <constraint firstAttribute="trailing" secondItem="pj6-RR-SEC" secondAttribute="trailing" constant="20" id="O8O-ZF-Rdu"/>
+                                    <constraint firstItem="KAY-Up-zKG" firstAttribute="centerX" secondItem="Xe9-hr-vAi" secondAttribute="centerX" id="Xoh-vg-kHZ"/>
+                                    <constraint firstItem="rEM-0u-faF" firstAttribute="leading" secondItem="Xe9-hr-vAi" secondAttribute="leading" constant="20" id="ZC5-r2-nxS"/>
+                                    <constraint firstItem="pj6-RR-SEC" firstAttribute="leading" secondItem="Xe9-hr-vAi" secondAttribute="leading" constant="20" id="d0d-ab-r31"/>
+                                    <constraint firstItem="KAY-Up-zKG" firstAttribute="top" secondItem="Xe9-hr-vAi" secondAttribute="top" constant="20" id="iNg-3e-Np3"/>
+                                    <constraint firstItem="wN5-sv-uH5" firstAttribute="top" secondItem="pj6-RR-SEC" secondAttribute="bottom" constant="15" id="yaY-Os-VSD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FCH-6N-K2k"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Xe9-hr-vAi" secondAttribute="bottom" id="8w4-D8-iXj"/>
+                            <constraint firstItem="Xe9-hr-vAi" firstAttribute="leading" secondItem="FCH-6N-K2k" secondAttribute="leading" id="Ebf-13-7ee"/>
+                            <constraint firstItem="FCH-6N-K2k" firstAttribute="trailing" secondItem="Xe9-hr-vAi" secondAttribute="trailing" id="Vb6-2i-dzM"/>
+                            <constraint firstItem="FCH-6N-K2k" firstAttribute="bottom" secondItem="rEM-0u-faF" secondAttribute="bottom" constant="20" id="Za5-p6-y5f"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="draggableView" destination="Xe9-hr-vAi" id="fzp-h4-zpn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zxb-sY-x3C" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000.0000000000001" y="61.607142857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
